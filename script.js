@@ -51,33 +51,34 @@ function generatePassword(){
   var upperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var numbersString = "0123456789"
   var specialString = "!@#$%^&*()_-+=\{[}]';:<,>.?/"
-
-  if (passwordLength == true ){
-    
-  }
+  var passwordCharacters = ""
+  var finalPassword = ""
+  
+  // if (passwordLength == true ){
+  //   // for( i = 8; i <= passwordLength; i++)
+  //   // // finalPassword.concat(passwordCharacters.random())
+  // }
   if (passwordLower == true){
-    passwordCharacters.concat(lowerString)
+    passwordCharacters = (passwordCharacters + lowerString)
+    console.log(passwordLower)
   }
   if (passwordUpper == true){
-    passwordCharacters.concat(upperString)
+    passwordCharacters= (passwordCharacters + upperString)
+    console.log(passwordUpper)
   }
   if (passwordNum == true){
-    passwordCharacters.concat(numbersString)
+    passwordCharacters = (passwordCharacters + numbersString)
+    console.log(passwordNum)
   }
   if (passwordSpe == true){
-    passwordCharacters.concat(specialString)
+    passwordCharacters = (passwordCharacters + specialString)
+    console.log(passwordSpe)
   }
-  var passwordCharacters = ""
+  console.log(finalPassword)
+  var randomValue = Math.floor(Math.random()*(passwordCharacters.length +1))
+  console.log(randomValue)
 
-  // IF PSSWRD_LOWER == true
-  // THEN PASSWORDCHARACTERS.ADD(LOWERSTRING)
-  // IF PSSWRD_UPPER == true
-  // THEN PASSWORDCHARACTERS.ADD(UPPERSTRING)
-
-  // FOR( I IS 0; I < PSSWD_LNGTH; I++)
-  //   FINALPASSWORD.ADD(PASSWORDCHARACTERS.RAND())
-
-  return 0
+  return finalPassword 
 }
 
 
