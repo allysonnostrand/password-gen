@@ -1,3 +1,4 @@
+/* prompt 1 password length------------------------------------------------*/
 function generatePasswordLength(){
   var i = true
   var prompt1
@@ -12,20 +13,25 @@ function generatePasswordLength(){
   return prompt1 
 }
 
+/*prompt 2 lowercase characters---------------------------------------------*/
 function generatePasswordLowerCase(){
   let prompt2 = window.confirm("Would you like lowercase letters in your password?(hit okay to confirm yes)")
   return prompt2
 }
 
+/*prompt 3 uppercase characters----------------------------------------------*/
 function generatePasswordUpperCase(){
   let prompt3 = window.confirm("Would you like uppercase letters in your password?(hit okay to confirm yes)")
   return prompt3
 }
 
+/*prompt 4 numbers-------------------------------------------------------------*/
 function generatePasswordNumeric(){
   let prompt4 = window.confirm("Would you like numbers in your password?(hit okay to confirm yes)")
   return prompt4
 }
+
+/*this is where stuff gets stored for the password------------------------------*/
 
 function generatePassword(){
   var passwordLength = generatePasswordLength()
