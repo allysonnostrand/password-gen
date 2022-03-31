@@ -17,27 +17,21 @@ function generatePasswordLowerCase(){
   return prompt2
 }
 
-// function generatePasswordUpperCase(){
-//   let prompt3 = window.prompt("How long would you like your password to be between 8-128?(number values only)")
-//   console.log(prompt1) 
-//   if (prompt1 >= 8 && prompt1 <= 128){
-//     return prompt1 
-//   }
-//   else return generatePasswordLength()
-// }
+function generatePasswordUpperCase(){
+  let prompt3 = window.confirm("Would you like uppercase letters in your password?(hit okay to confirm yes)")
+  return prompt3
+}
 
-// function generatePasswordNumeric(){
-//   let prompt4 = window.prompt("How long would you like your password to be between 8-128?(number values only)")
-//   console.log(prompt1) 
-//   if (prompt1 >= 8 && prompt1 <= 128){
-//     return prompt1 
-//   }
-//   else return generatePasswordSpecial()
-// }
+function generatePasswordNumeric(){
+  let prompt4 = window.confirm("Would you like numbers in your password?(hit okay to confirm yes)")
+  return prompt4
+}
 
 function generatePassword(){
   var passwordLength = generatePasswordLength()
   var generatePasswordLower = generatePasswordLowerCase()
+  var generatePasswordUpper = generatePasswordUpperCase()
+  var generatePasswordNum = generatePasswordNumeric()
   
   return 0
 }
