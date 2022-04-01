@@ -74,12 +74,16 @@ function generatePassword(){
     passwordCharacters = (passwordCharacters + specialString)
     console.log(passwordSpe)
   }
-  console.log(finalPassword)
+
+  for (let passwordCharacters = 0; passwordCharacters = passwordLength; i++){
   var randomValue = Math.floor(Math.random()*(passwordCharacters.length +1))
   console.log(randomValue)
+  console.log()
+  }
 
   return finalPassword 
 }
+
 
 
 
