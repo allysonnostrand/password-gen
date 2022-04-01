@@ -3,13 +3,13 @@ function generatePasswordLength(){
   var i = true
   var prompt1
   while ( i == true) {
-    let prompt1 = window.prompt("How long would you like your password to be between 8-128?(number values only)")
+    prompt1 = window.prompt("How long would you like your password to be between 8-128?(number values only)")
     console.log(prompt1) 
     if (prompt1 >= 8 && prompt1 <= 128){
       i = false;
     }
   }
-  console.log ("spot1")
+  console.log ("prmpt1: " + prompt1)
   return prompt1 
 }
 
@@ -37,8 +37,7 @@ function generatePasswordSpecial(){
   return prompt5
 }
 
-/*now i need to take the variables with info from previous functions and get them to do stuff*/
-/*this is where stuff gets stored for the password AND do stuff------------------------------*/
+/*Function with for loop for generating the password!!------------------------------------------*/
 
 function generatePassword(){
   var passwordLength = generatePasswordLength()
@@ -54,10 +53,6 @@ function generatePassword(){
   var passwordCharacters = ""
   var finalPassword = ""
   
-  // if (passwordLength == true ){
-  //   // for( i = 8; i <= passwordLength; i++)
-  //   // // finalPassword.concat(passwordCharacters.random())
-  // }
   if (passwordLower == true){
     passwordCharacters = (passwordCharacters + lowerString)
     console.log(passwordLower)
@@ -74,30 +69,16 @@ function generatePassword(){
     passwordCharacters = (passwordCharacters + specialString)
     console.log(passwordSpe)
   }
+  console.log(passwordLength)
 
-  for (let passwordCharacters = 0; passwordCharacters = passwordLength; i++){
+  for (let i = 0; i < passwordLength; i++){
   var randomValue = Math.floor(Math.random()*(passwordCharacters.length +1))
   console.log(randomValue)
-  console.log()
+  console.log(passwordCharacters.charAt(randomValue))
+  finalPassword = (finalPassword + passwordCharacters.charAt(randomValue))
   }
-
-  return finalPassword 
+  return finalPassword
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Assignment Code, DO NOT EDIT ANTHING  BELOW THIS LINE
 var generateBtn = document.querySelector("#generate");
